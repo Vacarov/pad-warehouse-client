@@ -25,7 +25,7 @@ export class EmployeeComponent {
     public getEmployees(page: number, count: number) {
         this.dataService.getEmployees(page, count).subscribe(
             result => {
-                this.dataService = result._embedded.employeeResourceList;
+                this.employees = result._embedded.employeeResourceList;
                 this.pageResult = result.pageResult;
             }
         );

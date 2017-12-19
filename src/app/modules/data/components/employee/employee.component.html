@@ -5,12 +5,11 @@
             <h1 class="title">Employees </h1>
             <div class="line"></div>
             <div class="list" *ngFor="let employee of employees">
-                {{employee.first_name}}
                 <md-list>
                     <div class="row">
                         <div class="large-6 columns">
-                            <h3> First name: {{employee.first_name}} </h3>
-                            <h3> Last name: {{employee.last_name}} </h3>
+                            <h3> First name: {{employee.firstName}} </h3>
+                            <h3> Last name: {{employee.lastName}} </h3>
                             <h3> Salary name: {{employee.salary}} </h3>
                             <h3> Department: {{employee.department}} </h3>
                         </div>
@@ -68,10 +67,10 @@
     </div>
 
     <!--<div class="row">-->
-        <!--<p>Elements on pageResult: {{pageResult.size}} </p>-->
-        <!--<p>Total elements: {{pageResult.totalElements}} </p>-->
-        <!--<p>Total pages: {{pageResult.totalPages}} </p>-->
-        <!--<p>Current pageResult: {{pageResult.number}} </p>-->
+    <!--<p>Elements on pageResult: {{pageResult.size}} </p>-->
+    <!--<p>Total elements: {{pageResult.totalElements}} </p>-->
+    <!--<p>Total pages: {{pageResult.totalPages}} </p>-->
+    <!--<p>Current pageResult: {{pageResult.number}} </p>-->
     <!--</div>-->
 
 </section>
