@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {DataService} from '../../data.service';
+import {FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
     selector: 'app-department',

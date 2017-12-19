@@ -15,10 +15,10 @@
                         </div>
 
                         <div class="large-4 columns">
-                            <form #myForm="ngForm" (ngSubmit)="editEmployee(myForm.value)">
+                            <form [formGroup]="formEditEmpl" (ngSubmit)="editEmployee()">
                                 <div class="row">
                                     <div class="form-group large-8 columns">
-                                        <input type="text" class="form-control editEmployee"
+                                        <input type="text" formControlName="firstName" class="form-control"
                                                placeholder="Enter name">
                                     </div>
 

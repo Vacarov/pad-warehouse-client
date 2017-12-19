@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {DataService} from '../../data.service';
-import {FormsModule} from '@angular/forms';
+import {FormGroup, FormBuilder, AbstractControl, Validators, Form} from '@angular/forms';
 
 @Component({
     selector: 'app-employee',
@@ -12,10 +12,12 @@ export class EmployeeComponent {
     employees: any;
     pageResult: any;
 
+    formEditEmpl: FormGroup;
+
     @Input() pageIndex = 0;
     @Input() pageSize = 2;
 
-    constructor(private dataService: DataService) {
+    constructor(private dataService: DataService, private formBuilder: FormBuilder) {
         this.getEmployees(this.pageIndex, this.pageSize);
     }
 
@@ -37,7 +39,10 @@ export class EmployeeComponent {
     }
 
     public editEmployee(form: any) {
-        console.log('test-edit');
+        this.formEditEmpl = this.formBuilder.group({
+// si aisi dai denumirile la inputuri
+            name: [ name ]
+        });
     }
 
     public createEmployee(uri: string){
