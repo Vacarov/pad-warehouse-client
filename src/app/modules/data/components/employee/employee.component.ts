@@ -1,5 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {DataService} from '../../data.service';
+import {FormsModule} from '@angular/forms';
 
 @Component({
     selector: 'app-employee',
@@ -35,7 +36,7 @@ export class EmployeeComponent {
         console.log('test-delete');
     }
 
-    public editEmployee(path: string) {
+    public editEmployee(form: any) {
         console.log('test-edit');
     }
 

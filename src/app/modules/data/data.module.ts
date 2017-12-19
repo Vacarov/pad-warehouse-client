@@ -8,6 +8,7 @@ import {DataService} from './data.service';
 import {MdPaginatorModule} from '@angular/material';
 import {MdListModule} from '@angular/material';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
     imports: [
@@ -17,7 +18,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
         MdButtonModule,
         MdListModule,
         MdPaginatorModule,
-        NgbModule.forRoot()
+        NgbModule.forRoot(),
+        FormsModule
     ],
     exports: [],
     declarations: [

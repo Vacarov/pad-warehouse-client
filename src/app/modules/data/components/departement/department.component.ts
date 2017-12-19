@@ -14,6 +14,7 @@ export class DepartmentComponent {
     @Input() pageIndex = 0;
     @Input() pageSize = 20;
     private id: number;
+    private myform: any;
 
     /**
      * @param {DataService} dataService
@@ -49,17 +50,19 @@ export class DepartmentComponent {
         );
     }
 
-    public editDepartment(dep: any) {
-        this.dataService.deleteDepartment(dep._links.self.href).subscribe(result => {
-                const index = this.departments.indexOf(dep);
-                if (index > -1) {
-                    this.departments.splice(index, 1);
-                }
-            },
-            error => {
-                console.log('Error!')
-            }
-        );
+    public editDepartment() {
+        if (this.myform.valid) {
+            console.log('Form Submitted!')
+        }        // this.dataService.deleteDepartment(dep._links.self.href).subscribe(result => {
+        //         const index = this.departments.indexOf(dep);
+        //         if (index > -1) {
+        //             this.departments.splice(index, 1);
+        //         }
+        //     },
+        //     error => {
+        //         console.log('Error!')
+        //     }
+        // );
     }
 
     public createDepartment(dep: any) {

@@ -10,15 +10,15 @@ import {FormsModule} from '@angular/forms';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        HomeModule,
+        DataModule
     ],
     imports: [
         BrowserModule,
         CoreModule,
         SharedModule,
         routes,
-        HomeModule,
-        DataModule,
         FormsModule
     ],
     providers: [],
