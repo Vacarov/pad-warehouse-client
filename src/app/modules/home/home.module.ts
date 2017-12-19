@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {MdCardModule, MdButtonModule} from '@angular/material';
+import {MatCardModule, MatButtonModule} from '@angular/material';
 import {Routing} from 'app/modules/home/home.routes';
 import {HomePageComponent} from './pages/home.page';
 
@@ -8,8 +8,8 @@ import {HomePageComponent} from './pages/home.page';
     imports: [
         CommonModule,
         Routing,
-        MdCardModule,
-        MdButtonModule
+        MatCardModule,
+        MatButtonModule
     ],
     declarations: [
         HomePageComponent

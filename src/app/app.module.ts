@@ -6,7 +6,6 @@ import {SharedModule} from './shared/shared.module';
 import {routes} from './app.routes';
 import {HomeModule} from './modules/home/home.module';
 import {DataModule} from './modules/data/data.module';
-
 @NgModule({
     declarations: [
         AppComponent,
