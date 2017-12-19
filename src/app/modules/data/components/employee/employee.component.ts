@@ -17,8 +17,11 @@ export class EmployeeComponent {
     @Input() pageIndex = 0;
     @Input() pageSize = 2;
 
-    constructor(private dataService: DataService, private formBuilder: FormBuilder) {
+    constructor(private dataService: DataService, formBuilder: FormBuilder) {
         this.getEmployees(this.pageIndex, this.pageSize);
+        this.formEditEmpl = formBuilder.group({
+            name: ['']
+        });
     }
 
     /**
@@ -39,10 +42,7 @@ export class EmployeeComponent {
     }
 
     public editEmployee(form: any) {
-        this.formEditEmpl = this.formBuilder.group({
-// si aisi dai denumirile la inputuri
-            name: [ name ]
-        });
+        console.log(form.value);
     }
 
     public createEmployee(uri: string){

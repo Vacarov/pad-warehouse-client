@@ -10,11 +10,11 @@ import {DataModule} from './modules/data/data.module';
 @NgModule({
     declarations: [
         AppComponent,
-        HomeModule,
-        DataModule
     ],
     imports: [
         BrowserModule,
+        HomeModule,
+        DataModule,
         CoreModule,
         SharedModule,
         routes
