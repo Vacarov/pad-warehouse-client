@@ -10,7 +10,7 @@ export class ApiService {
   /**
    * @type {string}
    */
-  private apiEndpoint = 'http://localhost/...';
+  private apiEndpoint = 'http://localhost:8080/api';
 
   /**
    * @param {Http} http
@@ -90,8 +90,8 @@ export class ApiService {
    * @returns {Observable<any>}
    */
   public delete(path: string): Observable<any> {
-
-    const endpoint = `${this.apiEndpoint}/${path}`;
+console.log(path);
+    const endpoint = `${path}`;
 
     return this.http
       .delete(`${endpoint}`)

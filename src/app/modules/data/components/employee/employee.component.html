@@ -1,0 +1,77 @@
+<section>
+
+    <div class="row">
+        <div class="large-8 columns">
+            <h1 class="title">Employees </h1>
+            <div class="line"></div>
+            <div class="list" *ngFor="let employee of employees">
+                {{employee.first_name}}
+                <md-list>
+                    <div class="row">
+                        <div class="large-6 columns">
+                            <h3> First name: {{employee.first_name}} </h3>
+                            <h3> Last name: {{employee.last_name}} </h3>
+                            <h3> Salary name: {{employee.salary}} </h3>
+                            <h3> Department: {{employee.department}} </h3>
+                        </div>
+
+                        <div class="large-4 columns">
+                            <form (ngSubmit)="editEmployee()">
+                                <div class="row">
+                                    <div class="form-group large-8 columns">
+                                        <input type="text" class="form-control editName"
+                                               placeholder="Enter name">
+                                    </div>
+
+                                    <div class="large-1 columns"></div>
+                                    <div class="center">
+                                        <button type="submit" class="btn btn-primary">Edit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="large-2 columns">
+                            <button (click)="deleteEmployee()" type="submit" class="btn btn-danger">Delete
+                            </button>
+                        </div>
+
+                    </div>
+                </md-list>
+            </div>
+        </div>
+        <div class="large-1 columns"></div>
+        <div class="large-3 columns">
+
+            <br><br><br>
+            <form (ngSubmit)="createEmployee()">
+                <div class="row">
+                    <div class="form-group large-8 columns">
+                        <label for="firstName">First name:</label>
+                        <input type="text" class="form-control" id="firstName"
+                               placeholder="Enter name">
+                        <label for="lastName">Last name:</label>
+                        <input type="text" class="form-control" id="lastName"
+                               placeholder="Enter name">
+                        <label for="salary">Salary:</label>
+                        <input type="text" class="form-control" id="salary"
+                               placeholder="Enter name">
+                    </div>
+
+                    <div class="large-1 columns"></div>
+                    <div class="center">
+                        <button type="submit" class="btn btn-success">Create Employee</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!--<div class="row">-->
+        <!--<p>Elements on pageResult: {{pageResult.size}} </p>-->
+        <!--<p>Total elements: {{pageResult.totalElements}} </p>-->
+        <!--<p>Total pages: {{pageResult.totalPages}} </p>-->
+        <!--<p>Current pageResult: {{pageResult.number}} </p>-->
+    <!--</div>-->
+
+</section>
